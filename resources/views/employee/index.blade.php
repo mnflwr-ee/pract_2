@@ -39,6 +39,7 @@
                                 <th>Age</th>
                                 <th>Address</th>
                                 <th>Zip</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
 
@@ -55,11 +56,8 @@
                                 <td>{{$items->zip}}</td>
                                  <td> 
                                     <span class="badge bg-success"><a href="{{  route('employee.edit', $items->id)}}" class="btn btn-success mx-3  "><h5>Edit</h5></a></span>
+                                    <span class="badge bg-danger"><a href="{{  route('employee.delete', $items->id)}}" class="m-3 p-lg-5"><h5>Delete</h5></a></span>
                                 </td>
-                                <td> 
-                                    
-                                <span class="badge bg-danger"><a href="{{  route('employee.delete', $items->id)}}" class="m-3 p-lg-5"><h5>Delete</h5></a></span>
-                                </td> 
                                 
                             </tr>
                             @endforeach
